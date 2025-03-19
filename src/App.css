@@ -1,38 +1,236 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+  background-image: url('./assets/HD-wallpaper-dark-doodle.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  
+  font-family: 'Playfair Display', serif; /* Apply the font */
+  font-size: 48px; /* Make it prominent */
+  font-weight: 700; /* Bold */
+  color: #f7f4f4;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  background-color: rgba(5, 5, 5, 0.979); /* Subtle background */
+  border-bottom: 2px solid #ccc; /* Optional underline effect */
+}
+footer {
+  
+  font-family: 'Lobster', cursive; 
+  font-size: 36px; /* Make it prominent */
+  font-weight: 700; /* Bold */
+  color: #f7f4f4;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  background-color: rgba(5, 5, 5, 0.979); /* Subtle background */
+  border-bottom: 2px solid #ccc; /* Optional underline effect */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 70%;
+}
+.book p {
+  color: #333; /* Ensure this contrasts with the background */
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.book {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.book button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.book button:hover {
+  background-color: #0056b3;
+}
+
+.cart {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 25%;
+}
+
+.cart h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cart button:hover {
+  background-color: #c82333;
+}
+
+.checkout {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.checkout button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.payment-options {
+  margin-top: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.payment-options h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #f8f3f3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.payment-options button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.payment-options button:hover {
+  background-color: #0056b3;
+}
+
+.checkout button:hover {
+  background-color: #218838;
+}
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  background-color: #555;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+html {
+  scroll-behavior: smooth;
+}
+#home,
+#about,
+#contact {
+  padding: 20px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#home h1, #about h1, #contact h1 {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#home p, #about p, #contact p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: center;
 }
